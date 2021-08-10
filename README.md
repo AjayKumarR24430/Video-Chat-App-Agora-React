@@ -19,7 +19,7 @@ The Agora Web SDK makes the task of building a real-time engagement application 
 * If you have npm, type in `npm install` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
 * If you have yarn installed, type `yarn add` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
 * After installing the dependencies, type `npm start` or `yarn start` to run the app.
-* The react app will run on your localhost - [http://localhost:3000].
+* The react app will run on your localhost - [http://localhost:3000](http://localhost:3000).
 
 Source: https://www.agora.io/en/blog/building-a-video-chat-app-using-react-hooks-and-agora/
 
