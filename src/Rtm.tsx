@@ -3,15 +3,16 @@ import "./App.css";
 import useAgoraRtm from "./hooks/useAgoraRtm";
 import AgoraRTM from "agora-rtm-sdk";
 import { RtmClient } from "./types/AgoraRTMTypes";
-import { makeid } from "./helpers/randomId";
 import {AppId} from "./config" 
 
 const client = AgoraRTM.createInstance(AppId);
-const randomUseName = makeid(5);
-function Rtm() {
+function Rtm(props:{
+  userName: string;}
+  ) {
+  const {userName} = props;
   const [textArea, setTextArea] = useState("");
   const { messages, sendChannelMessage } = useAgoraRtm(
-    randomUseName,
+    userName,
     client as RtmClient
   );
   const submitMessage = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -23,7 +24,7 @@ function Rtm() {
     }
   };
   return (
-    <div className="App">
+    <div>
       <h1>Chat Box</h1>
       <div className="d-flex flex-column ">
         {messages.map((data, index) => {

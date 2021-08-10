@@ -46,7 +46,7 @@ const useAgoraRtm = (userName: string, client: RtmClient) => {
       .sendMessage({ text })
       .then(() => {
         setCurrentMessage({
-          user: { name: "Current User (Me)", color },
+          user: { name: "Me", color },
           message: text,
         });
       })

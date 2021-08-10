@@ -21,15 +21,16 @@ const token: string | null = null;
 const App = () => {
   const [inCall, setInCall] = useState(false);
   const [channelName, setChannelName] = useState("");
+  const [userName, setUserName] = useState("");
   return (
     <div>
       <br></br>
       <h1 className="heading">Video Chat Application</h1>
       <br></br><br></br>
       {inCall ? (
-        <VideoCall setInCall={setInCall} channelName={channelName} />
+        <VideoCall setInCall={setInCall} channelName={channelName} userName={userName}/>
       ) : (
-        <ChannelForm setInCall={setInCall} setChannelName={setChannelName} />
+        <ChannelForm setInCall={setInCall} setChannelName={setChannelName} setUserName={setUserName}/>
       )}
     </div>
   );
@@ -44,8 +45,9 @@ const useMicrophoneAndCameraTracks = createMicrophoneAndCameraTracks();
 const VideoCall = (props: {
   setInCall: React.Dispatch<React.SetStateAction<boolean>>;
   channelName: string;
+  userName: string;
 }) => {
-  const { setInCall, channelName } = props;
+  const { setInCall, channelName, userName } = props;
   const [users, setUsers] = useState<IAgoraRTCRemoteUser[]>([]);
   const [start, setStart] = useState<boolean>(false);
   // using the hook to get access to the client object
@@ -99,21 +101,10 @@ const VideoCall = (props: {
       init(channelName);
     }
 
-  }, [channelName, client, ready, tracks]);
+  }, [channelName, userName, client, ready, tracks]);
 
 
   return (
-    // <div className="split" >
-    //   <div className="video">
-    //     {ready && tracks && (
-    //       <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
-    //     )}
-    //     {start && tracks && <Videos users={users} tracks={tracks} />}
-    //   </div>
-    //   <div className="chat">
-    //     <Rtm/>
-    //   </div>
-    // </div>
     <div className="container">
       <div className="row">
         <div className="col-9 col-sm">
@@ -123,7 +114,7 @@ const VideoCall = (props: {
           {start && tracks && <Videos users={users} tracks={tracks} />}
         </div>
         <div className="col-3 col-sm">
-            <Rtm/>
+            <Rtm userName={userName}/>
         </div>
   </div>
   </div>
@@ -206,8 +197,9 @@ export const Controls = (props: {
 const ChannelForm = (props: {
   setInCall: React.Dispatch<React.SetStateAction<boolean>>;
   setChannelName: React.Dispatch<React.SetStateAction<string>>;
+  setUserName: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-  const { setInCall, setChannelName } = props;
+  const { setInCall, setChannelName, setUserName } = props;
 
   return (
     <form className="join">
@@ -215,6 +207,10 @@ const ChannelForm = (props: {
       <input type="text"
         placeholder="Enter Channel Name"
         onChange={(e) => setChannelName(e.target.value)}
+      />
+      <input type="text"
+        placeholder="Enter your name"
+        onChange={(e) => setUserName(e.target.value)}
       />
       <button onClick={(e) => {
         e.preventDefault();
