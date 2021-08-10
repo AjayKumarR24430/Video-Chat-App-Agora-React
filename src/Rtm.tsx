@@ -25,8 +25,8 @@ function Rtm(props:{
   };
   return (
     <div>
-      <h1>Chat Box</h1>
-      <div className="d-flex flex-column ">
+      <h1>Chat Section</h1>
+      <div className="d-flex flex-column">
       <div style={{ height: '400px', overflowY: 'scroll' }}>
         {messages.map((data, index) => {
           return (

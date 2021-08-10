@@ -63,7 +63,9 @@ body {
 .controls p{
   padding: 10px;
   cursor: pointer;
-  background: #38373A;
+  background: #FC5C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #F7F7F7;
   border-width: 1px;
   border-color: #F7F7F7;
@@ -71,8 +73,9 @@ body {
 }
 
 .controls p.on{
-  background: #F7F7F7;
-  color: #38373A;
+  background: #FC5C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-width: 1px;
   border-color: #38373A;
   border-style: solid;
@@ -106,7 +109,9 @@ body {
   min-width: 200px;
   padding: 12px 0;
   text-align: center;
-  background-color: #38373A;
+  background: #FC5C7D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #F7F7F7;
   border-width: 1px;
   border-color: #F7F7F7;
@@ -127,4 +132,14 @@ body {
 }
 .chat {
   width: '20%';
+}
+
+.gradient{
+  background: #e1eec3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f05053, #e1eec3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f05053, #e1eec3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.gradient1{
+
 }

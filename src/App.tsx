@@ -23,7 +23,7 @@ const App = () => {
   const [channelName, setChannelName] = useState("");
   const [userName, setUserName] = useState("");
   return (
-    <div>
+    <div className="gradient">
       <br></br>
       <h1 className="heading">Video Chat Application</h1>
       <br></br><br></br>
@@ -116,8 +116,8 @@ const VideoCall = (props: {
         <div className="col-3 col-sm">
             <Rtm userName={userName}/>
         </div>
-  </div>
-  </div>
+      </div>
+    </div>
   );
 };
 
@@ -128,7 +128,7 @@ const Videos = (props: {
   const { users, tracks } = props;
 
   return (
-    <div>
+    <div >
       <div id="videos">
         {/* AgoraVideoPlayer component takes in the video track to render the stream,
             you can pass in other props that get passed to the rendered div */}
@@ -180,7 +180,7 @@ export const Controls = (props: {
   };
 
   return (
-    <div className="controls">
+    <div className="controls gradient1">
       <p className={trackState.audio ? "on" : ""}
         onClick={() => mute("audio")}>
         {trackState.audio ? "Mute Audio" : "Unmute Audio"}
@@ -204,7 +204,8 @@ const ChannelForm = (props: {
   const [channel, setChannel] = useState("");
 
   return (
-    <form className="join">
+    <div>
+    <form className="join gradient">
       {appId === '' && <p style={{color: 'red'}}>Please enter your Agora App ID in App.tsx and refresh the page</p>}
       <input type="text"
         placeholder="Enter Channel Name"
@@ -227,7 +228,10 @@ const ChannelForm = (props: {
       }}>
         Join
       </button>
+      <br></br>
+      <br></br>
     </form>
+    </div>
   );
 };
 
