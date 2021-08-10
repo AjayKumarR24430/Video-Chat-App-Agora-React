@@ -19,7 +19,14 @@ The Agora Web SDK makes the task of building a real-time engagement application 
 * If you have npm, type in `npm install` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
 * If you have yarn installed, type `yarn add` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
 * After installing the dependencies, type `npm start` or `yarn start` to run the app.
-* The react app will run on your localhost - [http://localhost:3000](http://localhost:3000).
+* The react app will run on your localhost - [http://localhost:3000](http://localhost:3000)
+
+### Functionalities of this application:
+* Initially, the user will be prompted to enter the channel name and their names in a form while running the app.
+* Either the user can enter a new channel name and go inside, or the user can add in an existing channel name and join that respective channel.
+* Each channel has features of video, audio and real time messaging amongst users.
+* An user can mute/unmute their audio/video whenever they want and also can use the chat section to post queries and type in their thoughts and whatsoever, like a real-time live video meeting along with chat.
+* The user can leave the channel whenever he/she feels so and will be re-directed to the home page where the form is displayed.
 
 Source: https://www.agora.io/en/blog/building-a-video-chat-app-using-react-hooks-and-agora/
 
