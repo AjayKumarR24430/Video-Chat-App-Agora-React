@@ -27,7 +27,6 @@ The Agora Web SDK makes the task of building a real-time engagement application 
 * Either the user can enter a new channel name and go inside, or the user can add in an existing channel name and join that respective channel.
 * Each channel has features of video, audio and real time messaging amongst users.
 ![Video chat](https://github.com/AjayKumarR24430/Video-Chat-App-Agora-React/blob/main/screenshots/Video%20chat%20ss2.png)
-    I have switched off the camera for the purpose of anonymity.
 * An user can mute/unmute their audio/video whenever they want and also can use the chat section to post queries and type in their thoughts and whatsoever, like a real-time live video meeting along with chat.
 ![Chat](https://github.com/AjayKumarR24430/Video-Chat-App-Agora-React/blob/main/screenshots/Video%20chat%20ss3.png)
 * The user can leave the channel whenever he/she feels so and will be re-directed to the home page where the form is displayed.
