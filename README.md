@@ -10,9 +10,16 @@ The Agora Web SDK makes the task of building a real-time engagement application 
 * Create a project and copy the App ID so that it can be used in this application.
 
 ### Prerequisites
-Node >= 10.16
-npm >= 5.6
-React ≥ 16.8
+* Node >= 10.16
+* npm >= 5.6
+* React ≥ 16.8
+
+### Steps to make this Video chat app running:
+* Clone the repository. Eg: git clone <your_repository_name>
+* If you have npm, type in `npm install` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
+* If you have yarn installed, type `yarn add` to install the packages and dependencies for this project. (Check if typescript is installed since the project has typescript files)
+* After installing the dependencies, type `npm start` or `yarn start` to run the app.
+* The react app will run on your localhost - [http://localhost:3000].
 
 Source: https://www.agora.io/en/blog/building-a-video-chat-app-using-react-hooks-and-agora/
 
