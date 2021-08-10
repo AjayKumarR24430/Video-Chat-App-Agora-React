@@ -27,18 +27,19 @@ function Rtm(props:{
     <div>
       <h1>Chat Box</h1>
       <div className="d-flex flex-column ">
+      <div style={{ height: '400px', overflowY: 'scroll' }}>
         {messages.map((data, index) => {
           return (
             <div className="row" key={`chat${index + 1}`}>
               <h5 className="font-size-6" style={{ color: data.user.color }}>
                 {`${data.user.name} :`}
+                {` ${data.message}`}
               </h5>
-              <p>{` ${data.message}`}</p>
             </div>
           );
         })}
-      </div>
-      <div>
+      </div></div>
+      <div style={{marginTop: 10}}>
         <textarea
           placeholder="Type your message here"
           className="form-control"

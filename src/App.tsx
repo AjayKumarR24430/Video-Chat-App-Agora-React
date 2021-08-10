@@ -200,21 +200,30 @@ const ChannelForm = (props: {
   setUserName: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const { setInCall, setChannelName, setUserName } = props;
+  const [name, setName] = useState("");
+  const [channel, setChannel] = useState("");
 
   return (
     <form className="join">
       {appId === '' && <p style={{color: 'red'}}>Please enter your Agora App ID in App.tsx and refresh the page</p>}
       <input type="text"
         placeholder="Enter Channel Name"
-        onChange={(e) => setChannelName(e.target.value)}
+        onChange={(e) => {setChannelName(e.target.value); setChannel(e.target.value)}}
       />
       <input type="text"
         placeholder="Enter your name"
-        onChange={(e) => setUserName(e.target.value)}
+        onChange={(e) => {setUserName(e.target.value); setName(e.target.value)}}
       />
       <button onClick={(e) => {
         e.preventDefault();
-        setInCall(true);
+        if(name=="" && channel==""){
+          alert("Please fill in the details!")
+        }else if(name==""){
+          alert("Please fill the name!")
+        }else if(channel==""){
+          alert("Please enter the channel name!")
+        }else{
+        setInCall(true);}
       }}>
         Join
       </button>
