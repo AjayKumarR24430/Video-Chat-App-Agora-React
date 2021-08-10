@@ -26,12 +26,12 @@ body {
 
 #videos{
   position: relative;
-  height: 85vh;
-  width: 100vw;
+  height: 80vh;
+  width: 70vw;
   margin: auto;
   align-self: flex-start;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(440px, 2fr));
   justify-items: center;
   align-items: center;
 }
@@ -46,10 +46,10 @@ body {
 
 .controls{
   position: absolute;
-  bottom: -10px;
-  left: 50%;
+  bottom: -25px;
+  left: 40%;
   transform: translateX(-50%);
-  margin: -20px auto;
+  margin: -22px auto;
   display: grid;
   grid-template-columns: repeat(3, 33%);
   align-items: center;
@@ -57,6 +57,7 @@ body {
   z-index: 1;
   width: 500px;
   max-width: 60vw;
+  /* top: 62%; */
 }
 
 .controls p{
@@ -115,4 +116,15 @@ body {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+}
+
+.split{
+  display: 'grid';
+  flex-direction: 'row';
+}
+.video{
+  width: '80%';
+}
+.chat {
+  width: '20%';
 }

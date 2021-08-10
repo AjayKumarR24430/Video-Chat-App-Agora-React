@@ -7,12 +7,21 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "agora-rtc-react": "git://github.com/AgoraIO-Community/agora-rtc-react.git#v1.0.1",
+    "agora-rtm-sdk": "^1.4.3",
+    "bootstrap": "^5.1.0",
     "gh-pages": "^3.2.3",
+    "randomcolor": "^0.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.5",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/randomcolor": "^0.5.5",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.5",
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^17.0.16",
+    "@types/react": "^16.14.12",
     "@types/react-dom": "^17.0.9"
   }
 }

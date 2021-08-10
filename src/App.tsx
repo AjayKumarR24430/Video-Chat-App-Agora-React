@@ -9,6 +9,7 @@ import {
   IMicrophoneAudioTrack,
 } from "agora-rtc-react";
 import {AppId} from "./config" 
+import Rtm from "./Rtm";
 
 const config: ClientConfig = { 
   mode: "rtc", codec: "vp8",
@@ -22,7 +23,9 @@ const App = () => {
   const [channelName, setChannelName] = useState("");
   return (
     <div>
+      <br></br>
       <h1 className="heading">Video Chat Application</h1>
+      <br></br><br></br>
       {inCall ? (
         <VideoCall setInCall={setInCall} channelName={channelName} />
       ) : (
@@ -100,12 +103,30 @@ const VideoCall = (props: {
 
 
   return (
-    <div className="App">
-      {ready && tracks && (
-        <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
-      )}
-      {start && tracks && <Videos users={users} tracks={tracks} />}
-    </div>
+    // <div className="split" >
+    //   <div className="video">
+    //     {ready && tracks && (
+    //       <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
+    //     )}
+    //     {start && tracks && <Videos users={users} tracks={tracks} />}
+    //   </div>
+    //   <div className="chat">
+    //     <Rtm/>
+    //   </div>
+    // </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-9 col-sm">
+          {ready && tracks && (
+          <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
+          )}
+          {start && tracks && <Videos users={users} tracks={tracks} />}
+        </div>
+        <div className="col-3 col-sm">
+            <Rtm/>
+        </div>
+  </div>
+  </div>
   );
 };
 
