@@ -1,3 +1,21 @@
+# Video Chat Application Using Agora SDK and RTM 
+
+## Overview
+
+The Agora Web SDK makes the task of building a real-time engagement application painless. You don’t have to worry about latency, scale, or compatibility. The SDK uses an event-driven approach to handle users and their videos. The React wrapper gives you methods to create hooks that make accessing the client object and tracks object simple.
+
+### Steps to do before running this application:
+* Create an account in Agora.
+* Sign up at https://console.agora.io and log in to the dashboard.
+* Create a project and copy the App ID so that it can be used in this application.
+
+### Prerequisites
+Node >= 10.16
+npm >= 5.6
+React ≥ 16.8
+
+Source: https://www.agora.io/en/blog/building-a-video-chat-app-using-react-hooks-and-agora/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
